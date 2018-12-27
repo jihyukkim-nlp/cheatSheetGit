@@ -54,7 +54,7 @@ model = KeyedVectors.load_word2vec_format('model directory')
 
 ### get vocabulary
 ~~~ 
-vocab = model.index2word 
+vocab = model.index2word # class: list
 ~~~
 
 ### get word vectors
