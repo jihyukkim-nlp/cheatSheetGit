@@ -10,8 +10,9 @@ $ make
 ### one document per one line
 
 ### training
+in fastText folder
 ~~~
-$ ./fasttext skipgram -input kor -output kor_model -dim 100 -ws 3 -minCount 15
+$ ./fasttext skipgram -input "corpus directory" -output "model directory" -dim 100 -ws 3 -minCount 15
 ~~~
 
 
