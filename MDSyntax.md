@@ -162,6 +162,11 @@ This is a normal paragraph:
     This is a code block.
 end code block.
 
+또는 ~ 세개 혹은 \` 세개
+~~~
+this is code block
+~~~
+
 ## 2.5. 수평선```<hr/>```
 아래 줄은 모두 수평선을 만든다. 마크다운 문서를 미리보기로 출력할 때 *페이지 나누기* 용도로 많이 사용한다.
 ```
@@ -241,6 +246,26 @@ __double underscores__
 ![석촌호수 러버덕](http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0 "RubberDuck")
 
 사이즈 조절 기능은 없기 때문에 ```<img width="" height=""></img>```를 이용한다.
+
+## 2.9. 테이블
+~~~
+|parameter|	description|	default|
+|---|---|---|
+|input|	training file path	|mandatory|
+|output|	output file path	|mandatory|
+
+~~~
+|parameter|	description|	default|
+|---|---|---|
+|input|	training file path	|mandatory|
+|output|	output file path	|mandatory|
+|verbose|	verbosity level	|2|
+|minCount|	minimal number of word occurences	|5|
+|minCountLabel|	minimal number of label occurences	|0|
+|wordNgrams|	max length of word ngram	|1|
+|bucket|	number of buckets	|2000000|
+|minn|	min length of char ngram	|3|
+|maxn|	max length of char ngram	|6|
 
 ****
 # 3. 마크다운 사용기
