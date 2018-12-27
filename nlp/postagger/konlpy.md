@@ -8,7 +8,7 @@ $ pip3 install konlpy       # Python 3.x
 
 ### posTagging
 ~~~
->> from konlpy.tag import Kkma
+>> from konlpy.tag import Kkma # or Hannanum, Komoran, Mecab, Okt, Twitter
 >> kkma = Kkma()
 >> kkma.nouns(u'질문이나 건의사항은 깃헙 이슈 트래커에 남겨주세요.')
 [질문,
