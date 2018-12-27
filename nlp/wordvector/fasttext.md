@@ -1,6 +1,6 @@
 "C++" env
 
-# 설치하고자 하는 디렉토리에서 다음을 실행
+### install
 ~~~
 $ git clone https://github.com/facebookresearch/fastText.git
 $ cd fastText
@@ -9,8 +9,7 @@ $ make
 
 ### one document per one line
 
-### 단어벡터 학습
-in terminal
+### training
 ~~~
 $ ./fasttext skipgram -input kor -output kor_model -dim 100 -ws 3 -minCount 15
 ~~~
@@ -48,16 +47,17 @@ $ ./fasttext skipgram -input kor -output kor_model -dim 100 -ws 3 -minCount 15
 
 ### model loading
 ~~~
+#!pip install gensim
 from gensim.models import KeyedVectors
-model = KeyedVectors.load_word2vec_format('kor')
+model = KeyedVectors.load_word2vec_format('model directory')
 ~~~
 
-### 단어 리스트 작성
+### get vocabulary
 ~~~ 
 vocab = model.index2word 
 ~~~
 
-### 전체 단어벡터 추출
+### get word vectors
 ~~~
 wordvectors = []
 for v in vocab:
