@@ -6,6 +6,7 @@ pip install sentencepiece
 #### 1.2. C++ (from source)
 On ubuntu 16.04 LTS (Xenial Xerus):
 ~~~
+$ git clone "https://github.com/google/sentencepiece.git"
 % sudo apt-get install libprotobuf9v5
 % sudo apt-get install cmake pkg-config libprotobuf9v5 protobuf-compiler libprotobuf-dev libgoogle-perftools-dev 
 % cd /path/to/sentencepiece
