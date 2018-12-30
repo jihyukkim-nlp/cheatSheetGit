@@ -1,4 +1,4 @@
-``` #system_call #sys #subprocess ```
+``` #system_call #sys #subprocess #bash #command```
 ~~~
 import subprocess
 # move command
