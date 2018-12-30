@@ -21,3 +21,10 @@ show [filename#] on current terminal
 * -E: 행마다 끝에 $ 문자를 출력한다.
 * -T: 탭(tab) 문자를 출력한다.
 * -A: -vET 옵션을 사용한 것과 같은 효과를 본다.
+
+
+
+#### search key
+~~~
+#파일생성 #create #make #파일보기 #show
+~~~
