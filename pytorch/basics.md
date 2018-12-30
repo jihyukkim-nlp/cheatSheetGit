@@ -43,7 +43,4 @@ encoder_word_indices # batch_size, encoder_length
 encoder_attention # batch_size, decoder_length, encoder_length
 word_distribution = word_distribution.scatter_add_(2, encoder_word_indices, encoder_attention)
 ~~~
-#### search key
-~~~
-#pointer_network #ptr #copying_mechanism #copy
-~~~
+#### search key ```#pointer_network #ptr #copying_mechanism #copy```
