@@ -36,3 +36,14 @@ class Model(nn.Module):
 [[1,2,3],
  [4,5,6]] 
 ~~~
+### 5.2. scatter_add_
+~~~
+word_distribution # batch_size, decoder_length, vocab_size
+encoder_word_indices # batch_size, encoder_length
+encoder_attention # batch_size, decoder_length, encoder_length
+word_distribution = word_distribution.scatter_add_(2, encoder_word_indices, encoder_attention)
+~~~
+#### search key
+~~~
+#pointer_network #ptr #copying_mechanism #copy
+~~~
