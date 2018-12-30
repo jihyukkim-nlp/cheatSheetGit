@@ -1,5 +1,24 @@
-#### with "for" loop
+## with "for" loop
+### 1.1. Classification
+~~~
+def reduce_attention(self, hiddens_batch, lens_batch):
+    batch_size = hiddens_batch.size(0)
+    x = None
+    for i in range(batch_size):
+        lens = lens_batch[i]
+        hidden = hiddens_batch[i][:lens] # length, state_size
+        # print(hidden.size())#;exit()
+        energy = self.z(hidden).t()
+        # print(energy.size())#;exit()
+        attention = F.softmax(energy, dim=1)
+        # print(attention.sum());exit()
+        # print(attention.size())#;exit()
+        hidden_reduced = torch.mm(attention, hidden)
+        x = hidden_reduced if (x is None) else torch.cat([x, hidden_reduced], dim=0)
+    return x
+~~~
 
+### 1.2. Generation
 ~~~
 self.W = nn.Linear(hidden_size*2, hidden_size) # [key, query] > key
 self.z = nn.Linear(hidden_size, 1) # key > score
