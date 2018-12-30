@@ -18,3 +18,10 @@ find -name "filename" -ls
 ~~~
 find -name "directory name" -type d
 ~~~
+
+## 2. grep
+파일 내용 검색
+~~~
+grep -r "string" ./*
+~~~
+현재 디렉토리에서 시작해서 하위디렉토리 모두(-r)(recursive) 에서 "string" 이 있는 파일들을 찾아라
