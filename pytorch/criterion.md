@@ -17,8 +17,9 @@ self.criterion(predict, label)
 * kl divergence
 ~~~
 self.criterion = torch.nn.functional.kl_div
-predict = torch.softmax(x, dim=1)
-traget
+predict = torch.log_softmax(x, dim=1)
+target = torch.softmax(x, dim=1)
+self.criterion(predict, target)
 ~~~
 
 #### search key
