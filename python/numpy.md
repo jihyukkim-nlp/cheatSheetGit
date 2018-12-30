@@ -21,3 +21,9 @@ a = np.array([1,2,3])
 >> np.var(a)
 0.6666
 ~~~
+
+* random
+~~~
+>> np.random.permutation(np.range(5))
+[2,3,0,1,4]
+~~~
