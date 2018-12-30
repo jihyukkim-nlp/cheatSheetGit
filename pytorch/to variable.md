@@ -19,7 +19,7 @@ def to_var(x):
   elif isinstance(x, (np.ndarray, np.generic)):
     return Variable(torch.from_numpy(x)).cuda() if torch.cuda.is_available() else Variable(torch.from_numpy(x))
   else:
-    raise Exception
+    return Variable(x).cuda() if torch.cuda.is_available() else Variable(x)
 def to_var_cpu(x):
   if isinstance(x, list):
     if isinstance(x[0], int):
@@ -31,5 +31,5 @@ def to_var_cpu(x):
   elif isinstance(x, (np.ndarray, np.generic)):
     return Variable(torch.from_numpy(x))
   else:
-    raise Exception
+    return Variable(x)
 ~~~
