@@ -1,9 +1,12 @@
+* only for tensor input
 ~~~
 def to_var(x):
   return Variable(x).cuda() if torch.cuda.is_available() else Variable(x)
 def to_var_fixed(x):
   return Variable(x, requires_grad=False).cuda() if torch.cuda.is_available() else Variable(x, requires_grad=False)
 ~~~
+
+* for generic input (tensor, list, ndarray)
 ~~~
 def to_var(x):
   if isinstance(x, list):
