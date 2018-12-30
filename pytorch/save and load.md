@@ -1,7 +1,7 @@
 ~~~
 torch.save({
 'model_name':model.name,
-'param':model.state_dict(),
+'state_dict':model.state_dict(),
 'epoch':epoch,
 'train_loss':train_loss,
 'dev_accuracy':dev_loss,
@@ -11,6 +11,8 @@ torch.save({
 
 ~~~
 torch_file = torch.load([file directory .pth])
->> torch_file['model_name']
+state_dict = torch_file['state_dict']
+for name, param in state_dict.items():
+  model.state_dict[name].copy_(param)
 ... 
 ~~~
