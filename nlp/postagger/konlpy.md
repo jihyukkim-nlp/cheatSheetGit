@@ -36,3 +36,8 @@ $ pip3 install konlpy       # Python 3.x
  (!, SF),
  (^^, EMO)]
 ~~~
+
+#### search key
+~~~
+#postagging #nouns #noun #konlpy #konlp #pos #ner
+~~~
