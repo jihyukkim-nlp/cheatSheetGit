@@ -13,6 +13,15 @@ torch.nn.init.uniform_(self.l1.weight, -0.01, 0.01)
 torch.nn.init.constant_(self.l1.bias, 0)
 torch.nn.init.xavier_uniform_(self.embedding)
 ~~~
+#### lstm initialization
+~~~
+self.lstm = torch.nn.LSTM(input_size=64, hidden_size=32, num_layer=2, bias=True, batch_first=True, bidirectional=True)
+for p in self.lstm.parameters():
+  d = len(p.size())
+  if d==2: torch.nn.init.xavier_uniform_(p)
+  elif d==1: torch.nn.constant_(p, 0)
+  else: raise Exception
+~~~
 
 
 ### load pretrained vectors
