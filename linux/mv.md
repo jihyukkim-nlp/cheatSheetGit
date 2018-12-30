@@ -17,3 +17,9 @@
 ### wild card
 ex. 
 ``` mv *.gz ori_data ```
+
+
+#### search key
+~~~
+#파일이동 #move
+~~~
