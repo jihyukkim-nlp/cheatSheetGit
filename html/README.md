@@ -76,6 +76,68 @@ ref) https://www.w3schools.com/html/
 	</form>
 #### 3.2.2. Using label with for
 	<form>
-		<label for='First'> Enter </label>
-		<input id="First" type="text" name="" value="First">
+		<label for='id1'> Enter </label>
+		<input id="id1" type="text" name="" value="First">
+	</form>
+### 3.3. Radio Button
+#### 3.3.1. input type="radio"
+	<form>
+		<p> Where are you come from? </p>
+		<label for='fromkorea'> From Korea? </label>
+		<input id="fromkorea" type="radio" name="" value="">
+	</form>
+#### 3.3.2. choose one of them
+	<!-- Using name attribute in input tag -->
+	<!-- give same name to both input tag name attribute -->
+	<form>
+		<p> Where are you come from? </p>
+		<label for='fromkorea'> From Korea? </label>
+		<input id="fromkorea" type="radio" name="comefrom" value="">
+		<label for='fromothers'> From Other Countries? </label>
+		<input id="fromothers" type="radio" name="comefrom" value="">
+	</form>
+### 3.4. Select
+	<form>
+		<p> Are you good at English? </p>
+		<select name="degree">
+			<option value=5>Very Good</option>
+			<option value=4>Good</option>
+			<option value=3>Normal</option>
+			<option value=2>Bad</option>
+			<option value=1>Very Bad</option>
+		</select>
+	</form>
+### 3.5. Textarea
+	<form>
+		<p> Anything to comment? </p>
+		<textarea name="comment" rows="8" cols="80"></textarea>
+		<input type="submit" name="" value="SUBMIT">
+		<!-- if you click SUBMIT button, your url gonna chane -->
+		<!-- original_url/?comefrom=fromothers&degree=3 -->
+		<!-- name=value [&name=value]* pattern -->
+	</form>
+### 3.6. Submit
+	<form>
+		<p> Where are you come from? </p>
+		<label for='fromkorea'> From Korea? </label>
+		<input id="fromkorea" type="radio" name="comefrom" value="fromkorea">
+		<label for='fromothers'> From Other Countries? </label>
+		<input id="fromothers" type="radio" name="comefrom" value="fromothers">
+	
+		<p> Are you good at English? </p>
+		<select name="degree">
+			<option value=5>Very Good</option>
+			<option value=4>Good</option>
+			<option value=3>Normal</option>
+			<option value=2>Bad</option>
+			<option value=1>Very Bad</option>
+		</select>
+
+		<p> Anything to comment? </p>
+		<textarea name="comment" rows="8" cols="80"></textarea>
+		
+		<input type="submit" name="" value="SUBMIT">
+		<!-- if you click SUBMIT button, your url gonna chane -->
+		<!-- original_url/?comefrom=fromothers&degree=3&comment=it+was+great%21 -->
+		<!-- name=value [&name=value]* pattern -->
 	</form>
