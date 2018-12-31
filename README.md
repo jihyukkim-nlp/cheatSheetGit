@@ -1,2 +1,1 @@
-# cheatSheetGit
-my own cheat sheet
+this is the new direcotry
