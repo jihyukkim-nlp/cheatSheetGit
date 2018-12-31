@@ -51,7 +51,7 @@ ac
 >> s[::-1]
 dcba
 ~~~
-#### method ``` len, in, upper, lower, capitalize, title, startswith, endswith, find, rfindcount, split```
+#### method 
 * len
 * in
 * upper, lower, capitalize, title
