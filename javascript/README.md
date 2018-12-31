@@ -1,3 +1,10 @@
 # README
 
-### sleep ```	await sleep(1000); // sleep for 1 second ```
+### sleep
+~~~
+async function demo() {
+  console.log('Taking a break...');
+  await sleep(2000);
+  console.log('Two seconds later');
+}
+~~~
