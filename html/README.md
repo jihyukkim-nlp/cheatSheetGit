@@ -1,5 +1,5 @@
 # HTML Basics
-``` ref) https://www.w3schools.com/html/ ```
+ref) https://www.w3schools.com/html/
 ## 1. List
 ### 1.1. Ordered List
   ~~~
