@@ -2,25 +2,20 @@
 ref) https://www.w3schools.com/html/
 ## 1. List
 ### 1.1. Ordered List
-  ~~~
-  <ol>
+	<ol>
 		<li> First </li>
 		<li> Second </li>
 		<li> Third </li>
 	</ol>
-  ~~~
 ### 1.2. Unordered List
-  ~~~
-  <ul>
+  	<ul>
 		<li>First</li>
 		<li>Second</li>
 		<li>Third</li>
 	</ul>
-  ~~~
- 
+  
 ## 2. Table
-~~~
-<table>
+	<table>
 		<thead> <!-- Column Names -->
 			<th>Name</th> 
 			<th>Age</th>
@@ -36,34 +31,31 @@ ref) https://www.w3schools.com/html/
 			<td>28</td>
 			<td>HIS</td>
 		</tr>
-</table>
-~~~
+	</table>
 
 ## 3. Form
-~~~
-<form>
-	<input type="email" name="useremail" value="abcd@gogo.com">
-	<input type="password" name="userpassword" value="">
-	<input type="submit" name="" value="Click Me">
-	<input type="color" name="" value="Color Information">
-	<input type="text" name="description" value="default text">
-</form>
-~~~
 ### 3.0. Basics
+	<form>
+		<input type="email" name="useremail" value="abcd@gogo.com">
+		<input type="password" name="userpassword" value="">
+		<input type="submit" name="" value="Click Me">
+		<input type="color" name="" value="Color Information">
+		<input type="text" name="description" value="default text">
+	</form>
 #### 3.0.1. required
-~~~ 
-<input type="text" name="me" placeholder="who are you?" required> <!-- neccessary input for submit -->
-<input type="text" name="password" placeholder="password" required> <!-- neccessary input for submit -->
-<input type="text" name="tosay" placeholder="anything to say?"> <!-- not neccessary for submit -->
-<input type="submit" name="submit" value="Click"> <!-- if you click this your url gonna change -->
-~~~
+	<input type="text" name="me" placeholder="who are you?" required> <!-- neccessary input for submit -->
+	<input type="text" name="password" placeholder="password" required> <!-- neccessary input for submit -->
+	<input type="text" name="tosay" placeholder="anything to say?"> <!-- not neccessary for submit -->
+	<input type="submit" name="submit" value="Click"> <!-- if you click this your url gonna change -->
 #### 3.0.2. placeholder
 ``` <input type="email" name="useremail" placeholder="Enter Email"> ``` <!-- if some text input placeholder disappear -->
+
 ### 3.1. Action
 	<form action="https://fb.com" method="get">
 		<input type="text" name="" value="go to facebook">
 		<input type="submit" name="" value="submit">
 	</form>
+
 ### 3.2. Label
 #### 3.2.1. Basic
 	<form>
@@ -79,6 +71,7 @@ ref) https://www.w3schools.com/html/
 		<label for='id1'> Enter </label>
 		<input id="id1" type="text" name="" value="First">
 	</form>
+
 ### 3.3. Radio Button
 #### 3.3.1. input type="radio"
 	<form>
@@ -96,6 +89,7 @@ ref) https://www.w3schools.com/html/
 		<label for='fromothers'> From Other Countries? </label>
 		<input id="fromothers" type="radio" name="comefrom" value="">
 	</form>
+
 ### 3.4. Select
 	<form>
 		<p> Are you good at English? </p>
@@ -107,6 +101,7 @@ ref) https://www.w3schools.com/html/
 			<option value=1>Very Bad</option>
 		</select>
 	</form>
+
 ### 3.5. Textarea
 	<form>
 		<p> Anything to comment? </p>
@@ -116,6 +111,7 @@ ref) https://www.w3schools.com/html/
 		<!-- original_url/?comefrom=fromothers&degree=3 -->
 		<!-- name=value [&name=value]* pattern -->
 	</form>
+
 ### 3.6. Submit
 	<form>
 		<p> Where are you come from? </p>
