@@ -1,1 +1,1 @@
-this is the new direcotry
+cheat sheet repository
