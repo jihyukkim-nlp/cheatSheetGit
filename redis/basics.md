@@ -6,6 +6,9 @@ $ wget http://download.redis.io/redis-stable.tar.gz
 $ tar xvzf redis-stable.tar.gz
 $ cd redis-stable
 $ make
+or
+$ make MALLOC=libc
+
 $ redis-server >> activate server
 $ redis-cli >> activate client
 $ redis-cli ping >> check if redis is working
