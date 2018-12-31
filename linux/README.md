@@ -5,3 +5,5 @@
 * cd
 * echo
 
+## open folder
+``` nautilus ./ ```
