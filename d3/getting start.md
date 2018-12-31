@@ -33,3 +33,12 @@ var rect= d3.select("#canvas")
             .attr("height", 60)
             .attr("fill", "green")
 ~~~
+
+### loading data 
+~~~
+d3.json("[path/to/.json]").then(function(data){
+	// Code goes here
+}).catch(function(error){
+	console.log(error);
+});
+~~~
