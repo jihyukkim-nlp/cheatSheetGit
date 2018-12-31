@@ -55,7 +55,7 @@ ref) https://www.w3schools.com/html/
 <input type="text" name="me" placeholder="who are you?" required> <!-- neccessary input for submit -->
 <input type="text" name="password" placeholder="password" required> <!-- neccessary input for submit -->
 <input type="text" name="tosay" placeholder="anything to say?"> <!-- not neccessary for submit -->
-<input type="submit" name="submit" value="Click">
+<input type="submit" name="submit" value="Click"> <!-- if you click this your url gonna change -->
 ~~~
 #### 3.0.2. placeholder
 ``` <input type="email" name="useremail" placeholder="Enter Email"> ``` <!-- if some text input placeholder disappear -->
