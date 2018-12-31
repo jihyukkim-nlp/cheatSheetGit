@@ -4,7 +4,6 @@ $ python3 -m http.server >> resolve CORF constraint
 ~~~
 
 ### svg, rectangle, circle, ellipse, path, line, text
-``` svg canvas 를 벗어나는 도형은 화면에 나타나지 않는다. ```
 ~~~
 <svg width="400" height="600">
 	<rect x="0" y="0" width="50" height="50" fill="green" stroke="grey" stroke-width="5px"></rect>
@@ -23,6 +22,9 @@ $ python3 -m http.server >> resolve CORF constraint
 	<path ></path>
 </svg>
 ~~~
+	* additional note
+	``` SVG = Scallable Vector Graphics ```
+	``` svg canvas 를 벗어나는 도형은 화면에 나타나지 않는다. ```
 
 ### select, append, attr ``` jQuery 와 유사 ```
 ~~~
