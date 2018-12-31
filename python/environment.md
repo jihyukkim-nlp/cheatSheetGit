@@ -4,13 +4,15 @@
 ~~~
 
 ### * 환경구축 ``` #environment #환경 #python_env #python_environment #가상환경 #virtual_environment #venv ```
-reference:  https://zetawiki.com/wiki/Virtualenv_%EC%82%AC%EC%9A%A9%EB%B2%95
+reference
+- https://zetawiki.com/wiki/Virtualenv_%EC%82%AC%EC%9A%A9%EB%B2%95
+- https://tutorial.djangogirls.org/ko/django_installation/
 ~~~
 $ sudo apt-get install python3-venv
 $ python3 -m venv [environment name]
 $ source [environment name]/bin/activate 또는 $ . [environment name]/bin/activate
 ~~~
   * deletion (delete venv directory)
-~~~
-$ rm -r [environment name]
-~~~
+  ~~~
+  $ rm -r [environment name]
+  ~~~
