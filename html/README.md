@@ -106,10 +106,6 @@ ref) https://www.w3schools.com/html/
 	<form>
 		<p> Anything to comment? </p>
 		<textarea name="comment" rows="8" cols="80"></textarea>
-		<input type="submit" name="" value="SUBMIT">
-		<!-- if you click SUBMIT button, your url gonna chane -->
-		<!-- original_url/?comefrom=fromothers&degree=3 -->
-		<!-- name=value [&name=value]* pattern -->
 	</form>
 
 ### 3.6. Submit
