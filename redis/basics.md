@@ -45,3 +45,7 @@ $ DBSIZE
 $ shutdown save
 >> redis server 를 켤 때 RDB 파일이 자동으로 upload
 ~~~
+
+## 4. Command
+ref: (redis) https://redis.io/commands
+ref: (redis-py) https://redis-py.readthedocs.io/en/latest/
