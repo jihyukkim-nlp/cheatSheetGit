@@ -4,10 +4,10 @@ script file 에는 default argument 들이 있음 (argparse module 활용)
 예)
 > train.sh
 ~~~bash
-python --train -batch 32
+python train.py --train --batch 32 --input_dir ../data/train.txt
 ~~~
 
 > eval.sh
 ~~~bash
-python --evaluation -batch 32
+python eval.py --evaluation --batch 32 --input_dir ../data/test.txt
 ~~~
