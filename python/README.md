@@ -222,3 +222,43 @@ c
 b
 a
 ~~~
+
+### Tuple
+> NOTE) tuple 도 sequence 자료형이므로 ``` *, +, in, len, count, index ``` 등을 지원한다.
+
+#### 1. Packing, Unpacking
+~~~python
+>> t=1,2,"hellow" # packing
+>> x,y,z=t # unpacking
+~~~
+- extended unpacking
+~~~python
+>> t = (1,2,3,4,5)
+>> a, *b = t # * means rest of all
+>> a
+1
+>> b
+2,3,4,5  
+~~~
+
+#### 2. Using tuple as arguments
+~~~python
+def fn(a,b,c):
+	return c,b,a
+t=(1,2,3)
+print(fn(*t))
+~~~
+
+#### 3. namedtuple()
+~~~python
+>>> from collections import namedtuple
+>>> Circle = namedtuple('CircleNamedTuple', 'cx cy radius')
+>>> Circle.__name__
+'CircleNamedTuple'
+>>> c1 = Circle(1.0, 2.0, 1.0)
+>>> c2 = Circle(3.4, 2.2, 2.0)
+>>> c1
+CircleNamedTuple(cx=1.0, cy=2.0, radius=1.0)
+>>> c2.cx, c2.cy, c2.radius
+(3.4, 2.2, 2.0)
+~~~
