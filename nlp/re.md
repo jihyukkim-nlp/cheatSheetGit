@@ -41,6 +41,7 @@ print(abc.sub("", s))
 * \S: matches any non-white-space character
 
 ## Non-printable characters 
+
 |\t|\n|\v|\r|\f|
-----------------
+|--|--|--|--|--|
 |tab|new line| vertical tab| carriage return| form feed|
