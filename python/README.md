@@ -15,7 +15,7 @@ $ python setup.py install
 
 ``` build-in data structure 는 모두 reference 로 참조 ```
 
-### execute string statement
+### execute string statement ```python eval, exec, compile ``` 
 ~~~
 >> a=3
 >> expr = "a+4" # statement is not allowed, e.g. "a=3"
@@ -33,14 +33,14 @@ else:
 >> exec(multiple_stmt)
 is 10
 ~~~
-``` NOTE) compile function ```
+> NOTE) compile function 
 
 ### print( , , , end=' ', sep=', ', file=[file descriptor])
-``` NOTE) import pprint; pprint() #complex print ```
+> NOTE) import pprint; pprint() #complex print 
 
 ### String
 #### slicing ``` [start:stop:step] ```
-~~~
+~~~python
 >> s='abcd'
 >> s[1:]
 bcd
@@ -63,11 +63,11 @@ dcba
 * center, ljust, rjust
 * isdigit, isnumeric, isdecimal, isalpha, isalnum, islower, isupper, isspace
 #### operator ``` +, * ```
-``` NOTE) defining unicode characters "\uac00"='가'```
+> NOTE) defining unicode characters "\uac00"='가'
 #### 한글 유니코드 자소 추출
 한글 유니코드 = 0xAC00 + ((초성순서*21) + 중성순서)*28 + 종성순서
 ``` chr(0xd55c) == '한' ```
-~~~
+~~~python
 def compose_hangul(cho, jung, jong):
   code = 0xac00 + ((cho*21)+jung)*28+jong
   return chr(code)
@@ -77,7 +77,7 @@ print(compose_hangul(18, 0, 4)) # result = '한'
 * 초성: ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ
 * 중성: ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ
 * 종성: 없음(0) ㄱ(1), (ㄲ)(ㄱㅅ)(ㄴ)(ㄴㅈ)(ㄴㅎ)(ㄷ)(ㄹ)(ㄹㄱ)(ㄹㅁ)(ㄹㅂ)(ㄹㅅ)(ㄹㅌ)(ㄹㅍ)(ㄹㅎ)(ㅁ)(ㅂ)(ㅂㅅ)(ㅅ)(ㅆ)(ㅇ)(ㅈ)(ㅊ)(ㅋ)(ㅌ)(ㅍ)(ㅎ)
-~~~
+~~~python
 def decompose_hangul(c):
   code=ord(c)-0xac00
   cho=code//(21*28)
@@ -89,7 +89,7 @@ def decompose_hangul(c):
 
 ### Memory Management
 #### reference count
-~~~
+~~~python
 >> import sys
 >> a=b=c=500
 >> sys.getrefcount(a) #ref count including function call "getrefcount" (actual reference = return value - 1)
@@ -109,13 +109,13 @@ True
 ~~~
 
 ### If statement
-``` NOTE) can be replaced by dictionary structure and get function ```
-~~~
+> NOTE) can be replaced by dictionary structure and get function
+~~~python
 >> order="spagetti"
 >> menu={"spam":500, "ham":700, "egg":300}
 >> price=menu.get(order, 0) #return 0 if there is no key for [order]
 ~~~
-~~~
+~~~python
 #conditional function call
 >> def add(a,b): return a+b
 >> def sub(a,b): return a-b
@@ -125,7 +125,7 @@ True
 ~~~
 
 ### Iterator ``` 메모리관리와 연산의 효율성 증대, lazy evaluation ``` 
-~~~
+~~~python
 >> i = iter(range(10))
 >> next(i)
 0
