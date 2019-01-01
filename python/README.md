@@ -5,6 +5,21 @@ $ cd aaa
 $ python setup.py install
 ~~~
 
+### get variable, method list ``` #unknown_library ```
+~~~python
+>> dir()
+['__builtins__', '__doc__', '__name__', '__package__']
+>> a=100
+>> dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'a']
+>> __name__
+'__main__'
+>> dir(str)
+>>> s="abc"
+>>> dir(s)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+~~~
 ### single line code
 ~~~python
 >> a=1;b=3
@@ -132,6 +147,12 @@ True
 >> next(i)
 1
 ~~~
+> NOTE) generator ``` () rather than [] ```
+~~~python
+>> ((a+1) for a in range(100))
+<generator object <genexpr> at 0x000000>
+~~~
+> lazy evaluation
 ### List
 #### 1. method
 | | | | |
@@ -140,3 +161,65 @@ True
 |index|count|||
 |sort|reverse|||
 |remove|pop|||
+~~~python
+>> s=[1,2,3]
+>> s.append(5) # no return
+[1,2,3,5]
+>> s.insert(3,4) # no return
+>> s
+[1,2,3,4,5]
+>> s.index(3)
+2
+>> s.count(2)
+1
+>> s.reverse() # no return
+>> s
+[5,4,3,2,1]
+>> s.sort() # no return
+>> s
+[1,2,3,4,5]
+>> s.sort(reverse=True) # no return
+>> s
+[5,4,3,2,1]
+>> s.sort()
+>> s.remove(5) # no return
+>> s
+[1,2,3,4]
+>> s.extend([6,7]) 
+[1,2,3,4,6,7]
+>> s.pop(0) # now s=[2,3,4,6,7]
+1
+>> s.pop(1) # now s=[2,4,6,7]
+3
+~~~
+#### 2. sort ```key attribute, sorted method```
+~~~python
+>> s = ['123','456','78']
+>> s.sort(key=int, reverse=True) # compare after applying "int" built-in function
+>> s
+['789', '456', '123']
+>> def mykey(a):
+      return a%3
+>> L=[1,5,3,9,8,4,2]
+>> L.sort(key=mykey)
+>> L
+[3,9,1,4,5,8,2]
+>> L=[1,5,3,9,8,4,2] # with lambda function
+>> L.sort(key=lambda x: x%3)
+>> L
+[3,9,1,4,5,8,2]
+>> newList=L.sorted() # no change for original list L
+>> newList
+[1,2,3,4,5,8,9]
+>> L
+[3,9,1,4,5,8,2]
+~~~
+#### 3. reversed
+> NOTE) reversed function return iterator
+~~~python
+>> L=list('abc')
+>> for c in L.reversed():print(c)
+c
+b
+a
+~~~
