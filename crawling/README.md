@@ -9,11 +9,11 @@ from concurrent.futures import ThreadPoolExecutor
 
 url_format = "https://someUrl?[queries]={}"
 def request_and_extract(iter_index):
-  query_values = [] # using iter_index
-  url = url_format.format(*query_values))
-  response = urllib.request.urlopen(url)
-  html = response.read()
-  soup = BeautifulSoup(html, 'html.parser')
+	query_values = [] # using iter_index
+	url = url_format.format(*query_values))
+	response = urllib.request.urlopen(url)
+	html = response.read()
+	soup = BeautifulSoup(html, 'html.parser')
 	# extract data using beautifulsoup object
 	return data
 def crawle_and_save(iter_index):
