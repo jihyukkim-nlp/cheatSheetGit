@@ -7,3 +7,6 @@
 
 ## open folder
 ``` nautilus ./ ```
+
+## remove package
+``` sudo apt remove --purge [installed package] ```
