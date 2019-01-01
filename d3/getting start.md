@@ -1,8 +1,8 @@
 ### turn on server
+> resolve CORF constraint
 ~~~bash
 $ python3 -m http.server
 ~~~
-> resolve CORF constraint
 
 ### svg, rectangle, circle, ellipse, path, line, text
 ~~~javascript
