@@ -28,3 +28,9 @@ os.path.isdir([file directory])
 ~~~python
 os.path.getsize([file directory])
 ~~~
+
+7. 상대경로, 절대경로
+~~~python
+>> os.path.abspath("test.py") # 상대경로를 
+/home/username/.../test.py
+~~~
