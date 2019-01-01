@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # plt.switch_backend('agg')
 ~~~
 ## 1. Bar chart
-[!Frequncy_Distplot.png](./images/barchart/Frequency_Distplot.png)
+![Frequncy_Distplot.png](./images/barchart/Frequency_Distplot.png)
 ~~~python
 import matplotlib.pyplot as plt
 import seaborn as sns
