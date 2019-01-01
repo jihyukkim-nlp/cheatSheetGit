@@ -27,7 +27,8 @@ $ python3 -m http.server
 <br></br>
 > svg canvas 를 벗어나는 도형은 화면에 나타나지 않는다. 
 
-### select, append, attr ``` jQuery 와 유사 ```
+### select, append, attr  
+> jQuery 와 유사 
 ~~~javascript
 d3.select("[tag|.class|#id]"); 
 d3.selectAll("[tag|.class|#id]");
@@ -46,7 +47,8 @@ var rect= d3.select("#canvas")
             .attr("fill", "green")
 ~~~
 
-### loading data ``` d3.v5 (version5 rather than 4) ```
+### loading data 
+> d3.v5 (version5 rather than 4)
 ~~~javascript
 d3.json("[path/to/.json]").then(function(data){
 	// Code goes here
