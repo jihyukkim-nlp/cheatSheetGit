@@ -57,7 +57,7 @@
 ###### This is a H6
 ####### This is a 7.
 
-## 2.2. BlockQuote
+## 2.2. BlockQuote ```>```
 이메일에서 사용하는 ```>``` 블럭인용문자를 이용한다.
 ```
 > This is a blockqute.
@@ -165,6 +165,15 @@ end code block.
 또는 ~ 세개 혹은 \` 세개
 ~~~
 this is code block
+~~~
+
+\~\~\~python
+>이렇게 적어주면 python 문법에 맞게 출력
+\~\~\~
+~~~python
+import os, sys
+import numpy as np
+a = np.array([1,2,3])
 ~~~
 
 ## 2.5. 수평선```<hr/>```
