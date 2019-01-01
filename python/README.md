@@ -132,3 +132,11 @@ True
 >> next(i)
 1
 ~~~
+### List
+#### 1. method
+| | | | |
+|-|-|-|-|
+|append|insert|extend||
+|index|count|||
+|sort|reverse|||
+|remove|pop|||
