@@ -4,7 +4,7 @@ $ tar zxvf aaa.tar.gz
 $ cd aaa
 $ python setup.py install
 ~~~
-
+---------------------------------------
 ### get variable, method list ``` #unknown_library ```
 ~~~python
 >> dir()
@@ -17,8 +17,8 @@ $ python setup.py install
 >>> s="abc"
 >>> dir(s)
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
-
 ~~~
+
 ### single line code
 ~~~python
 >> a=1;b=3
@@ -52,55 +52,6 @@ is 10
 ### print( , , , end=' ', sep=', ', file=[file descriptor])
 > NOTE) import pprint; pprint() #complex print 
 
-### String
-#### slicing ``` [start:stop:step] ```
-~~~python
->> s='abcd'
->> s[1:]
-bcd
->> s[:-1]
-abc
->> s[::2]
-ac
->> s[::-1]
-dcba
-~~~
-#### method 
-* len
-* in
-* upper, lower, capitalize, title
-* startswith, endswith
-* find, rfind, index, rindex
-* count
-* strip, lstrip, rstrip, replace
-* split, lsplit, rsplit, join 
-* center, ljust, rjust
-* isdigit, isnumeric, isdecimal, isalpha, isalnum, islower, isupper, isspace
-#### operator ``` +, * ```
-> NOTE) defining unicode characters "\uac00"='가'
-#### 한글 유니코드 자소 추출
-한글 유니코드 = 0xAC00 + ((초성순서*21) + 중성순서)*28 + 종성순서
-``` chr(0xd55c) == '한' ```
-~~~python
-def compose_hangul(cho, jung, jong):
-  code = 0xac00 + ((cho*21)+jung)*28+jong
-  return chr(code)
-print(compose_hangul(18, 0, 4)) # result = '한'
-~~~
-
-* 초성: ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ
-* 중성: ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ
-* 종성: 없음(0) ㄱ(1), (ㄲ)(ㄱㅅ)(ㄴ)(ㄴㅈ)(ㄴㅎ)(ㄷ)(ㄹ)(ㄹㄱ)(ㄹㅁ)(ㄹㅂ)(ㄹㅅ)(ㄹㅌ)(ㄹㅍ)(ㄹㅎ)(ㅁ)(ㅂ)(ㅂㅅ)(ㅅ)(ㅆ)(ㅇ)(ㅈ)(ㅊ)(ㅋ)(ㅌ)(ㅍ)(ㅎ)
-~~~python
-def decompose_hangul(c):
-  code=ord(c)-0xac00
-  cho=code//(21*28)
-  jung=(code-cho*21*28)//28
-  jong=(cod-cho*21*28-jung*28)
-  return cholist[cho], junglist[jung], jonglist[jong]
-~~~
-
-
 ### Memory Management
 #### reference count
 ~~~python
@@ -122,22 +73,6 @@ True
 True
 ~~~
 
-### If statement
-> NOTE) can be replaced by dictionary structure and get function
-~~~python
->> order="spagetti"
->> menu={"spam":500, "ham":700, "egg":300}
->> price=menu.get(order, 0) #return 0 if there is no key for [order]
-~~~
-~~~python
-#conditional function call
->> def add(a,b): return a+b
->> def sub(a,b): return a-b
->> a=10
->> {True:add, False:sub}[a>5](3,4)
-7
-~~~
-
 ### Iterator ``` 메모리관리와 연산의 효율성 증대, lazy evaluation ``` 
 ~~~python
 >> i = iter(range(10))
@@ -152,8 +87,59 @@ True
 <generator object <genexpr> at 0x000000>
 ~~~
 > lazy evaluation
-### List
-#### 1. method
+---------------------------------------------------------------------
+### 1. String
+#### 1.1. slicing ``` [start:stop:step] ```
+~~~python
+>> s='abcd'
+>> s[1:]
+bcd
+>> s[:-1]
+abc
+>> s[::2]
+ac
+>> s[::-1]
+dcba
+~~~
+#### 1.2. method 
+* len
+* in
+* upper, lower, capitalize, title
+* startswith, endswith
+* find, rfind, index, rindex
+* count
+* strip, lstrip, rstrip, replace
+* split, lsplit, rsplit, join 
+* center, ljust, rjust
+* isdigit, isnumeric, isdecimal, isalpha, isalnum, islower, isupper, isspace
+#### 1.3. operator ``` +, * ```
+> NOTE) defining unicode characters "\uac00"='가'
+#### 1.4. 한글 유니코드 자소 추출
+한글 유니코드 = 0xAC00 + ((초성순서*21) + 중성순서)*28 + 종성순서
+``` chr(0xd55c) == '한' ```
+~~~python
+def compose_hangul(cho, jung, jong):
+  code = 0xac00 + ((cho*21)+jung)*28+jong
+  return chr(code)
+print(compose_hangul(18, 0, 4)) # result = '한'
+~~~
+
+* 초성: ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ
+* 중성: ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ
+* 종성: 없음(0) ㄱ(1), (ㄲ)(ㄱㅅ)(ㄴ)(ㄴㅈ)(ㄴㅎ)(ㄷ)(ㄹ)(ㄹㄱ)(ㄹㅁ)(ㄹㅂ)(ㄹㅅ)(ㄹㅌ)(ㄹㅍ)(ㄹㅎ)(ㅁ)(ㅂ)(ㅂㅅ)(ㅅ)(ㅆ)(ㅇ)(ㅈ)(ㅊ)(ㅋ)(ㅌ)(ㅍ)(ㅎ)
+~~~python
+def decompose_hangul(c):
+  code=ord(c)-0xac00
+  cho=code//(21*28)
+  jung=(code-cho*21*28)//28
+  jong=(cod-cho*21*28-jung*28)
+  return cholist[cho], junglist[jung], jonglist[jong]
+~~~
+
+--------------------------------------------
+
+### 2. List
+#### 2.1. method
 | | | | |
 |-|-|-|-|
 |append|insert|extend||
@@ -191,7 +177,7 @@ True
 >> s.pop(1) # now s=[2,4,6,7]
 3
 ~~~
-#### 2. sort ```key attribute, sorted method```
+#### 2.2. sort ```key attribute, sorted method```
 ~~~python
 >> s = ['123','456','78']
 >> s.sort(key=int, reverse=True) # compare after applying "int" built-in function
@@ -213,7 +199,7 @@ True
 >> L
 [3,9,1,4,5,8,2]
 ~~~
-#### 3. reversed
+#### 2.3. reversed
 > NOTE) reversed function return iterator
 ~~~python
 >> L=list('abc')
@@ -222,11 +208,11 @@ c
 b
 a
 ~~~
-
-### Tuple
+-----------------------------------------------------------------
+### 3. Tuple
 > NOTE) tuple 도 sequence 자료형이므로 ``` *, +, in, len, count, index ``` 등을 지원한다.
 > NOTE) tuple 은 값을 변경할 수 없는데 값을 변경할 수 없으면 hashable 하기 때문에 검색이 빠르다.
-#### 1. Packing, Unpacking
+#### 3.1. Packing, Unpacking
 ~~~python
 >> t=1,2,"hellow" # packing
 >> x,y,z=t # unpacking
@@ -241,7 +227,7 @@ a
 2,3,4,5  
 ~~~
 
-#### 2. Using tuple as arguments
+#### 3.2. Using tuple as arguments
 ~~~python
 def fn(a,b,c):
 	return c,b,a
@@ -249,7 +235,7 @@ t=(1,2,3)
 print(fn(*t))
 ~~~
 
-#### 3. namedtuple()
+#### 3.3. namedtuple()
 ~~~python
 >>> from collections import namedtuple
 >>> Circle = namedtuple('CircleNamedTuple', 'cx cy radius')
@@ -262,30 +248,44 @@ CircleNamedTuple(cx=1.0, cy=2.0, radius=1.0)
 >>> c2.cx, c2.cy, c2.radius
 (3.4, 2.2, 2.0)
 ~~~
-
-### Set
+------------------------------------------------------------------------------
+### 4. Set
 > NOTE) sequential 자료형이 아니므로 indexing, slicing, sorting 을 지원하지 않는다.
 
-#### 1. Instantiation
+#### 4.1. Instantiation
 ~~~python
 >> a=set()   # using set()
 >> a={1,2,3} # using {}
 ~~~
 
-#### 2. Methods
+#### 4.2. Methods
 | | | | |
 |-|-|-|-|
 |add|update|||
 |discard|remove|clear|pop|
 |intersection|union|difference|symmetric_difference|
 |issuperset|issubsub|isdisjoint||
-
-### Dictionary
-#### 1. Methods
+--------------------------------------------------------------------------------------
+### 5. Dictionary
+#### 5.1. Methods
 | | | | |
 |-|-|-|-|
 |D.clear()|D.copy()|||
 |D.get(key, [,x])|D.setdefault(key, [,x])|||
 |D.update(D2)||||
 |D.popitem()|D.pop(key)|||
-
+### 5.2. IF statement
+> NOTE) can be replaced by dictionary structure and get function
+~~~python
+>> order="spagetti"
+>> menu={"spam":500, "ham":700, "egg":300}
+>> price=menu.get(order, 0) #return 0 if there is no key for [order]
+~~~
+~~~python
+#conditional function call
+>> def add(a,b): return a+b
+>> def sub(a,b): return a-b
+>> a=10
+>> {True:add, False:sub}[a>5](3,4)
+7
+~~~
