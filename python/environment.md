@@ -16,3 +16,11 @@ $ source [environment name]/bin/activate 또는 $ . [environment name]/bin/activ
   ~~~
   $ rm -r [environment name]
   ~~~
+
+
+## Environment Using Conda
+~~~python
+>> conda create -n [environment name] python=[version, e.g. 2.0] anaconda
+>> source activate [environment name]
+>> source deactivate
+~~~
