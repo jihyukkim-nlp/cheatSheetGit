@@ -6,7 +6,7 @@ $ python setup.py install
 ~~~
 
 ### single line code
-~~~
+~~~python
 >> a=1;b=3
 >> if a==1 and \
     b==3:
@@ -15,8 +15,8 @@ $ python setup.py install
 
 ``` build-in data structure 는 모두 reference 로 참조 ```
 
-### execute string statement ```python eval, exec, compile ``` 
-~~~
+### execute string statement ``` eval, exec, compile ``` 
+~~~python
 >> a=3
 >> expr = "a+4" # statement is not allowed, e.g. "a=3"
 >> eval(expr)
