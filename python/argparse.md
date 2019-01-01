@@ -18,7 +18,7 @@ args = parser.parse_args()
 print("first={}, second={}, third={}, fourth={}, fifth={}".format(\
 	args.first, args.second, args.third, args.fourth, args.fifth))
 ~~~
-~~~python 
+~~~bash
 $ python argparse_example.py 1 2.3 "some string" one two dot dot dot
 first=1, second=2.3, third=some string, fourth=['one' 'two'], fifth=['dot','dot','dot']
 ~~~
