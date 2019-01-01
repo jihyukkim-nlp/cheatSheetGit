@@ -225,7 +225,7 @@ a
 
 ### Tuple
 > NOTE) tuple 도 sequence 자료형이므로 ``` *, +, in, len, count, index ``` 등을 지원한다.
-
+> NOTE) tuple 은 값을 변경할 수 없는데 값을 변경할 수 없으면 hashable 하기 때문에 검색이 빠르다.
 #### 1. Packing, Unpacking
 ~~~python
 >> t=1,2,"hellow" # packing
@@ -262,3 +262,30 @@ CircleNamedTuple(cx=1.0, cy=2.0, radius=1.0)
 >>> c2.cx, c2.cy, c2.radius
 (3.4, 2.2, 2.0)
 ~~~
+
+### Set
+> NOTE) sequential 자료형이 아니므로 indexing, slicing, sorting 을 지원하지 않는다.
+
+#### 1. Instantiation
+~~~python
+>> a=set()   # using set()
+>> a={1,2,3} # using {}
+~~~
+
+#### 2. Methods
+| | | | |
+|-|-|-|-|
+|add|update|||
+|discard|remove|clear|pop|
+|intersection|union|difference|symmetric_difference|
+|issuperset|issubsub|isdisjoint||
+
+### Dictionary
+#### 1. Methods
+| | | | |
+|-|-|-|-|
+|D.clear()|D.copy()|||
+|D.get(key, [,x])|D.setdefault(key, [,x])|||
+|D.update(D2)||||
+|D.popitem()|D.pop(key)|||
+
