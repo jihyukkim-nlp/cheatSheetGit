@@ -9,11 +9,11 @@ $ python setup.py install
 ~~~python
 >> a=1;b=3
 >> if a==1 and \
-    b==3:
+      b==3:
       print("yes!")
 ~~~
 
-``` build-in data structure 는 모두 reference 로 참조 ```
+> NOTE) build-in data structure 는 모두 reference 로 참조 
 
 ### execute string statement ``` eval, exec, compile ``` 
 ~~~python
