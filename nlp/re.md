@@ -3,7 +3,7 @@ testing: https://regex101.com
 ref: https://docs.python.org/3/library/re.html
 
 ## Basics
-~~~
+~~~python
 import re
 abc=re.compile(r"abc")
 s="abcdefg"
