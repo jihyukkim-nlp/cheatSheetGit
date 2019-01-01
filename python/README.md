@@ -96,7 +96,7 @@ def decompose_hangul(c):
 4 
 ~~~
 #### identification
-~~~
+~~~python
 >> a=b=500
 >> id(a)
 22675984
