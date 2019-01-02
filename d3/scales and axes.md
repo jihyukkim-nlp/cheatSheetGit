@@ -199,27 +199,33 @@ g.append("text")
     .attr("y", -60)
     .attr("font-size", "20px")
     .attr("text-anchor", "middle")
-    .attr("transform", "rotate(-90)")
+    .attr("transform", "rotate(-90)") /* Rotation transformation */
     .text("Height (m)");
 ~~~
 ~~~js
-var xAxisCall = d3.axisBottom(x);
-    g.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0, " + height + ")")
-        .call(xAxisCall)
-    .selectAll("text")
-        .attr("y", "10")
-        .attr("x", "-5")
-        .attr("text-anchor", "end")
-        .attr("transform", "rotate(-40)");
+d3.json("data/buildings.json").then(function(data){
+	console.log(data);
+	var xAxisCall = d3.axisBottom(x);
+	g.append("g")
+	 .attr("class", "x axis")
+	 .attr("transform", "translate(0, " + height + ")")
+	 .call(xAxisCall)
+	 .selectAll("text")
+	 .attr("y", "10")
+	 .attr("x", "-5")
+	 .attr("text-anchor", "end")
+	 .attr("transform", "rotate(-40)"); /* Rotation transformation */
 
-    var yAxisCall = d3.axisLeft(y)
-        .ticks(3)
-        .tickFormat(function(d){
-            return d + "m";
-        });
-    g.append("g")
-        .attr("class", "y-axis")
-        .call(yAxisCall);
+	var yAxisCall = d3.axisLeft(y)
+		.ticks(3) /* Only 3 intermediate ticks */
+		.tickFormat(function(d){ /* Specify tick text format */
+		    return d + "m";
+		});
+	g.append("g")
+	 .attr("class", "y-axis")
+	 .call(yAxisCall);
+})
 ~~~
+> Additional Functions: tickValue([1,2,3]), 
+
+> Axis Generator: axisTop, axisRight, axisBottom, axisLeft
