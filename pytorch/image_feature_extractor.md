@@ -1,9 +1,9 @@
 
 # extract image features using Torch
 
-https://github.com/facebook/fb.resnet.torch/blob/master/pretrained/README.md#extracting-image-features
 
 https://github.com/Cadene/pretrained-models.pytorch
+> Can check AVAILABLE MODELS, API, NEWS (Work in progress)
 
 ~~~bash
 pip install pretrainedmodels
