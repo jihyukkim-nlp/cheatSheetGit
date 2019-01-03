@@ -1,5 +1,5 @@
 ## tSNE
-~~~
+~~~python
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 
@@ -14,7 +14,7 @@ plt.show()
 ~~~
 
 ## PCA
-~~~
+~~~python
 from sklearn.decomposition import PCA
 
 model = PCA(n_components=2)
