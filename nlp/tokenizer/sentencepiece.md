@@ -1,25 +1,25 @@
 ### 1. install
 #### 1.1. python module
-~~~
+~~~bash
 pip install sentencepiece
 ~~~
 #### 1.2. C++ (from source)
 On ubuntu 16.04 LTS (Xenial Xerus):
-~~~
+~~~bash
 $ git clone "https://github.com/google/sentencepiece.git"
-% sudo apt-get install libprotobuf9v5
-% sudo apt-get install cmake pkg-config libprotobuf9v5 protobuf-compiler libprotobuf-dev libgoogle-perftools-dev 
-% cd /path/to/sentencepiece
-% mkdir build
-% cd build
-% cmake ..
-% make -j $(nproc)
-% sudo make install
-% sudo ldconfig -v
+$ sudo apt-get install libprotobuf9v5
+$ sudo apt-get install cmake pkg-config libprotobuf9v5 protobuf-compiler libprotobuf-dev libgoogle-perftools-dev 
+$ cd /path/to/sentencepiece
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j $(nproc)
+$ sudo make install
+$ sudo ldconfig -v
 ~~~
 
 ### 2. train model
-~~~
+~~~bash
 % spm_train --input=<input> --model_prefix=<model_name> --vocab_size=8000 --character_coverage=1.0 --model_type=<type>
 ~~~
 * ```--input_sentence_size```: Note that ```spm_train``` loads only the first ```--input_sentence_size``` sentences (default value is 10M).
@@ -32,7 +32,7 @@ $ git clone "https://github.com/google/sentencepiece.git"
 
 
 ### 3. tokenize
-~~~
+~~~python
 import sentencepiece as spm
 s = spm.SentencePieceProcessor()
 s.Load('spm.model')
@@ -47,14 +47,14 @@ for n in range(5):
 ~~~
 
 ### 4. export vocabulary list
-~~~
+~~~bash
 % spm_export_vocab --model=<model_file> --output=<output file>
 ~~~
 ```<output file>``` stores a list of vocabulary and emission log probabilities. The vocabulary id corresponds to the line number in this file.
 
 ### 5. put custom symbol into vocabulary
 User defined symbol is handled as one piece in any context. If this symbol is included in the input text, this symbol is always extracted as one piece.
-~~~
+~~~bash
 % spm_train --control_symbols=<s>,<\s> --user_defined_symbols=<user1>,<user2> --input=<input file> --model_prefix=<model file> --vocab_size=8000
 ~~~
 
@@ -69,25 +69,25 @@ Python wrapper for SentencePiece with SWIG. This module wraps sentencepiece::Sen
 ## Build and Install SentencePiece
 For Linux (x64/i686), macOS, and Windows(win32/x64) environment, you can simply use pip command to install SentencePiece python module.
 
-```
+~~~bash
 % pip install sentencepiece
-```
+~~~
 
 To build and install the Python wrapper from source, please install [SentencePiece C++](https://github.com/google/sentencepiece#c-from-source) and try the following commands:
-```
+~~~bash
 % python setup.py build
 % sudo python setup.py install
-```
+~~~
 
 If you don’t have write permission to the global site-packages directory or don’t want to install into it, please try:
-```
+~~~bash
 % python setup.py install --user
-```
+~~~
 
 ## Usage
 
 ### Segmentation
-```
+~~~python
 % python
 >>> import sentencepiece as spm
 >>> sp = spm.SentencePieceProcessor()
@@ -126,12 +126,12 @@ True
 1000
 >>> sp['</s>']
 2
-```
+~~~
 
 ### Model Training
 Training is performed by passing parameters of [spm_train](https://github.com/google/sentencepiece#train-sentencepiece-model) to  SentencePieceTrainer.Train() function.
 
-```
+~~~python
 >>> import sentencepiece as spm
 >>> spm.SentencePieceTrainer.Train('--input=test/botchan.txt --model_prefix=m --vocab_size=1000')
 unigram_model_trainer.cc(494) LOG(INFO) Starts training with : 
@@ -146,7 +146,7 @@ unigram_model_trainer.cc(529) LOG(INFO) EM sub_iter=1 size=1100 obj=10.4973 num_
 trainer_interface.cc(284) LOG(INFO) Saving model: m.model
 trainer_interface.cc(293) LOG(INFO) Saving vocabs: m.vocab
 >>>
-```
+~~~
 
 ## Python2/3 String/Unicode compatibility
 Sentencepiece python wrapper accepts both Unicode string and legacy byte string.
@@ -154,7 +154,7 @@ The output string type is determined by the input string type.
 The output type of IdToPiece/DecodeIds methods is *str*, but note that it is a legacy byte string in Python2 and Unicode string in Python3 respectively.
 
 * Python2:
-```
+~~~python
 >>> sp.EncodeAsPieces('吾輩は猫である')
 ['\xe2\x96\x81', '\xe5\x90\xbe', '\xe8\xbc\xa9', '\xe3\x81\xaf', '\xe7\x8c\xab', '\xe3\x81\xa7\xe3\x81\x82\xe3\x82\x8b']
 >>> sp.EncodeAsPieces(u'吾輩は猫である')
@@ -165,10 +165,10 @@ The output type of IdToPiece/DecodeIds methods is *str*, but note that it is a l
 '\xe3\x81\xab'
 >>> type(sp.IdToPiece(10))
 <type 'str'>
-```
+~~~
 
 * Python3:
-```
+~~~python
 >>> sp.EncodeAsPieces('吾輩は猫である')
 ['▁', '吾', '輩', 'は', '猫', 'である']
 >>> sp.EncodeAsPieces('吾輩は猫である'.encode('utf-8'))
@@ -178,4 +178,4 @@ The output type of IdToPiece/DecodeIds methods is *str*, but note that it is a l
 'に'
 >>> type(sp.IdToPiece(10))
 <class 'str'>
-```
+~~~
