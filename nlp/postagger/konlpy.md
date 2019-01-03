@@ -1,13 +1,13 @@
 ### install
 for linux
-~~~
+~~~bash
 $ sudo apt-get install g++ openjdk-7-jdk python-dev python3-dev
 $ pip3 install konlpy       # Python 3.x
 ~~~
 
 
 ### posTagging
-~~~
+~~~python
 >> from konlpy.tag import Kkma # or Hannanum, Komoran, Mecab, Okt, Twitter
 >> kkma = Kkma()
 >> kkma.nouns(u'질문이나 건의사항은 깃헙 이슈 트래커에 남겨주세요.')
