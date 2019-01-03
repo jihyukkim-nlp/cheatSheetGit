@@ -16,8 +16,11 @@ import os
 from tqdm import tqdm
 import numpy as np
 
-model = pretrainedmodels.__dict__['resnet101'](num_classes=1000, pretrained='imagenet')
+# can check available model names: print(pretrainedmodels.model_names)
+model_name = 'resnet101'
+model = pretrainedmodels.__dict__[model_name](num_classes=1000, pretrained='imagenet')
 if torch.cuda.is_available(): model.cuda() # to GPU
+model.eval() # evaluation mode (affect Dropout, BatchNorm)
 load_img = utils.LoadImage()
 # transformations depending on the model
 # rescale, center crop, normalize, and others (ex: ToBGR, ToRange255)
