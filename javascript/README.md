@@ -1,7 +1,7 @@
 # README
 
 ### sleep
-~~~
+~~~js
 async function demo() {
   console.log('Taking a break...');
   await sleep(2000);
