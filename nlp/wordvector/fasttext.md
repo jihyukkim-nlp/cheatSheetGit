@@ -1,7 +1,7 @@
 "C++" env
 
 ### install
-~~~
+~~~bash
 $ git clone https://github.com/facebookresearch/fastText.git
 $ cd fastText
 $ make
@@ -11,7 +11,7 @@ $ make
 
 ### training
 in fastText folder
-~~~
+~~~bash
 $ ./fasttext skipgram -input "corpus directory" -output "model directory" -dim 100 -ws 3 -minCount 15
 ~~~
 
@@ -47,25 +47,25 @@ $ ./fasttext skipgram -input "corpus directory" -output "model directory" -dim 1
 
 
 ### model loading
-~~~
+~~~python
 #!pip install gensim
 from gensim.models import KeyedVectors
 model = KeyedVectors.load_word2vec_format('model directory')
 ~~~
 
 ### get vocabulary
-~~~ 
+~~~ python
 vocab = model.index2word # class: list
 ~~~
 
 ### get word vectors
-~~~
+~~~python
 wordvectors = []
 for v in vocab:
 	wordvectors.append(model.wv[v])
 ~~~
 
 ### similar words
-~~~
+~~~python
 model.most_similar('영화', topn=30)
 ~~~
