@@ -1,5 +1,5 @@
 
-# extract features using Torch
+# extract image features using Torch
 
 https://github.com/facebook/fb.resnet.torch/blob/master/pretrained/README.md#extracting-image-features
 
