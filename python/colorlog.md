@@ -1,5 +1,7 @@
 ~~~python
 import colorlog, logging
+
+# INFO (green)
 colorlog.basicConfig(
 			filename=None,
 			level=logging.INFO,
@@ -8,6 +10,60 @@ colorlog.basicConfig(
 		)
 print_str = "some string"
 colorlog.info(print_str)
+
+# DEBUG (grey)
+colorlog.basicConfig(
+			filename=None,
+			level=logging.DEBUG,
+			format="%(log_color)s[%(levelname)s:%(asctime)s]%(reset)s %(message)s",
+			datefmt="%Y-%m-%d %H:%M:%S"
+		)
+print_str = "some string"
+colorlog.debug(print_str)
+
+# CRITICAL (red)
+colorlog.basicConfig(
+			filename=None,
+			level=logging.CRITICAL,
+			format="%(log_color)s[%(levelname)s:%(asctime)s]%(reset)s %(message)s",
+			datefmt="%Y-%m-%d %H:%M:%S"
+		)
+print_str = "some string"
+colorlog.critical(print_str)
+
+# ERROR (dark red)
+colorlog.basicConfig(
+			filename=None,
+			level=logging.ERROR,
+			format="%(log_color)s[%(levelname)s:%(asctime)s]%(reset)s %(message)s",
+			datefmt="%Y-%m-%d %H:%M:%S"
+		)
+print_str = "some string"
+colorlog.error(print_str)
+
+# WARN (yellow)
+colorlog.basicConfig(
+			filename=None,
+			level=logging.WARN,
+			format="%(log_color)s[%(levelname)s:%(asctime)s]%(reset)s %(message)s",
+			datefmt="%Y-%m-%d %H:%M:%S"
+		)
+print_str = "some string"
+colorlog.warning(print_str)
+
+# ANYTHING
+colorlog.basicConfig(
+			filename=None,
+			level=logging.NOTSET,
+			format="%(log_color)s[%(levelname)s:%(asctime)s]%(reset)s %(message)s",
+			datefmt="%Y-%m-%d %H:%M:%S"
+		)
+print_str = "some string"
+colorlog.info(print_str)
+colorlog.debug(print_str)
+colorlog.critical(print_str)
+colorlog.error(print_str)
+colorlog.warning(print_str)
 ~~~
 
 
