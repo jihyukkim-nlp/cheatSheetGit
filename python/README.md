@@ -5,7 +5,7 @@ $ cd aaa
 $ python setup.py install
 ~~~
 ---------------------------------------
-### get variable, method list ``` #unknown_library ```
+### get all attributes in namespace ``` #unknown_library ```
 ~~~python
 >> dir()
 ['__builtins__', '__doc__', '__name__', '__package__']
