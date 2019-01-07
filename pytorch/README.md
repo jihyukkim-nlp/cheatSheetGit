@@ -61,3 +61,12 @@ tensor([[ 2,  0,  0,  1],
         [ 0,  1,  1,  2],
         [ 1,  2,  2,  0]])
 ~~~
+
+## torch.topk(input, k, dim=None, largest=True, sorted=True, out=None) -> (Tensor, LongTensor)
+~~~python
+>>> x = torch.arange(1., 6.)
+>>> x
+tensor([ 1.,  2.,  3.,  4.,  5.])
+>>> torch.topk(x, 3)
+(tensor([ 5.,  4.,  3.]), tensor([ 4,  3,  2]))
+~~~
