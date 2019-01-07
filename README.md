@@ -1,6 +1,6 @@
 ## Find contents from cheatSheetGit
 ~~~bash
-cd cheatSheet
+cd cheatSheetGit
 grep -r "#<name>" ./* 
 ~~~
 
