@@ -1,6 +1,7 @@
 # tensorboardX
 
 > ref) https://tensorboardx.readthedocs.io/en/latest/tutorial.html#what-is-tensorboard-x
+> ref) https://github.com/lanpa/tensorboardX
 
 ## Install
 ~~~python
