@@ -95,6 +95,8 @@ False
 ~~~python
 CUDA_LAUNCH_BLOCKING=1 python3 train.py
 ~~~
+CUDA_LAUNCH_BLOCKING make cuda report the error where it actually occurs.
+Since the problem is at the cuda initialization function and does not appear on different machine I would guess that your cuda install is not working properly, you may want to reinstall it properly and test it with the cuda samples.
 
 ## contiguous
 ~~~python
