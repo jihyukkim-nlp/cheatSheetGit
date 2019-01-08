@@ -90,3 +90,8 @@ tensor([ 2.])
 >>> d.is_cuda
 False
 ~~~
+
+## Cuda Debugging
+~~~python
+CUDA_LAUNCH_BLOCKING=1 python3 train.py
+~~~
