@@ -95,3 +95,10 @@ False
 ~~~python
 CUDA_LAUNCH_BLOCKING=1 python3 train.py
 ~~~
+
+## contiguous
+~~~python
+is_contiguous()
+contiguous()
+~~~
+~~~
