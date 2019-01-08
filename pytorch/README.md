@@ -103,4 +103,9 @@ Since the problem is at the cuda initialization function and does not appear on 
 is_contiguous()
 contiguous()
 ~~~
+## Tensor Type Check
+~~~python
+>>> a=torch.Tensor([1])
+>>> a.type()
+'torch.FloatTensor'
 ~~~
