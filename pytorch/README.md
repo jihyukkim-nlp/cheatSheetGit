@@ -70,3 +70,23 @@ tensor([ 1.,  2.,  3.,  4.,  5.])
 >>> torch.topk(x, 3)
 (tensor([ 5.,  4.,  3.]), tensor([ 4,  3,  2]))
 ~~~
+
+## Cuda 확인
+~~~python
+>>> a=torch.Tensor([1])
+>>> a.is_cuda
+False
+>>> b=torch.Tensor([1]).cuda()
+>>> b.is_cuda
+True
+>>> c = torch.Tensor([2]).to(device='cuda')
+>>> c
+tensor([ 2.], device='cuda:0')
+>>> c.is_cuda
+True
+>>> d = torch.Tensor([2]).to(device='cpu')
+>>> d
+tensor([ 2.])
+>>> d.is_cuda
+False
+~~~
