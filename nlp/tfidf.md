@@ -1,10 +1,10 @@
 # Calculate TF-IDF scores
+
+> ref) https://datascienceschool.net/view-notebook/3e7aadbf88ed4f0d87a76f9ddc925d69/
+> ref) https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html
+
 ~~~python
 from sklearn.feature_extraction.text import TfidfVectorizer, TfidfTransformer
-
-tfidf = TfidfVectorizer(ngram_range=(1,5), max_features=500000)
-
-data = train_data + val_data
-x = [text for text, label in data]
-x_transformed = tfidf.fit_transform(x)
+tfidf = TfidfVectorizer(vocabulary=vocab)
+x_transformed = tfidf.fit_transform(x).toarray() # x is list of strings
 ~~~
