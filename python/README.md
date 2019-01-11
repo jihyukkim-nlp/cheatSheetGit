@@ -5,6 +5,17 @@ $ cd aaa
 $ python setup.py install
 ~~~
 ---------------------------------------
+### Ignore Warning
+~~~bash
+python -W ignore foo.py
+~~~
+or
+~~~python
+import warnings
+warnings.filterwarnings("ignore")
+~~~
+----------------------------------------
+
 ### get all attributes in namespace ``` #unknown_library ```
 ~~~python
 >> dir()
