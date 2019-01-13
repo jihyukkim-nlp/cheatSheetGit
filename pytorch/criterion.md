@@ -26,15 +26,15 @@ self.criterion(predict, label)
 ### kl divergence
 ~~~
 self.criterion = torch.nn.functional.kl_div
-predict = torch.log_softmax(x, dim=1)
-target = torch.softmax(x, dim=1)
+predict = torch.nn.functional.log_softmax(x, dim=1)
+target = torch.nn.functional.softmax(x, dim=1)
 self.criterion(predict, target)
 ~~~
 
 ### nll_loss ``` #cross entropy with softmax ```
 ~~~ 
 self.criterion = torch.nn.functional.nll_loss
-predict = torch.log_softmax(x, dim=1)
+predict = torch.nn.functional.log_softmax(x, dim=1)
 target = torch.LongTensor(y)
 self.criterion(predict, target)
 ~~~
