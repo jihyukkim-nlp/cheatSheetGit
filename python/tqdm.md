@@ -16,3 +16,9 @@ ls = list('abcde')
 for alpha in enumerate(tqdm(ls)):
   pass
 ~~~
+
+
+** For jupyter notebook
+~~~python
+from tqdm import tqdm_notebook as tqdm
+~~~
