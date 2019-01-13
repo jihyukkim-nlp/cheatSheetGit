@@ -1,3 +1,6 @@
+### jupyter notebook with venv
+> ref) https://anbasile.github.io/programming/2017/06/25/jupyter-venv/
+
 ### package install
 ~~~
 $ tar zxvf aaa.tar.gz
