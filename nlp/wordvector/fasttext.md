@@ -9,6 +9,8 @@ $ make
 
 ### one document per one line
 
+word token deliminator: " " (single white space)
+
 ### training
 in fastText folder
 ~~~bash
