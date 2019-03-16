@@ -21,7 +21,7 @@ corpus_bleu(list_of_references=[ [[1,2,3,4,5,6]], [[ ... ]] ], hypotheses=[ [1,2
  WordNet Exception: https://github.com/bheinzerling/pyrouge/issues/8
 ~~~python
 import sys
-sys.path.extend(['/home/kimjihyeok/pyrouge/'])
+sys.path.extend(['/home/iuser/pyrouge/'])
 from pyrouge import Rouge155
 
 basedir = '/home/somedirectory'
