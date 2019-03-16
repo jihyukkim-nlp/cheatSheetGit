@@ -9,3 +9,14 @@ corpus_bleu(list_of_references=[ [[1,2,3,4,5,6]], [[ ... ]] ], hypotheses=[ [1,2
 # references: multiple target sequences
 # hypothesis: predicted(or generated) sequences
 ~~~
+
+
+## ROUGE
+ open source ROUGE-1.5.5
+ https://github.com/bheinzerling/pyrouge
+ 
+ additional links:
+ Setup: https://poojithansl7.wordpress.com/2018/08/04/setting-up-rouge/
+ General Procedure: https://ireneli.eu/2018/01/11/working-with-rouge-1-5-5-evaluation-metric-in-python/
+ WordNet Exception: https://github.com/bheinzerling/pyrouge/issues/8
+ 
