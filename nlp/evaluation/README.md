@@ -24,7 +24,7 @@ import sys
 sys.path.extend(['/home/iuser/pyrouge/'])
 from pyrouge import Rouge155
 
-basedir = '/home/somedirectory'
+basedir = '/home/iuser'
 corpusdir = os.path.join(basedir, 'corpus')
 syspath = os.path.join(corpusdir, 'sys') // generated text
 refpath = os.path.join(corpusdir, 'ref') // target text
