@@ -6,5 +6,6 @@
 ~~~python
 from sklearn.feature_extraction.text import TfidfVectorizer, TfidfTransformer
 tfidf = TfidfVectorizer(vocabulary=vocab)
+# x: ['This is the first document.', 'This is the second second document.', 'And the third one.']
 x_transformed = tfidf.fit_transform(x).toarray() # x is list of strings
 ~~~
